@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn Git and GitHub from the best resources. This guide is prepared by Md Noushad Jahan Ramim, Founder & CEO of Hackathon Valley.">
+    <meta name="keywords" content="Git, GitHub, version control, coding, hackathon valley">
+    <meta name="author" content="Md Noushad Jahan Ramim">
+    <title>Git and GitHub Guide - Learn from the Best</title>
+    <style>
+        /* General Styling */
+        body {
+            background-color: #0f0f0f;
+            color: #00ff00;
+            font-family: "Courier New", Courier, monospace;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #1a1a1a;
+            box-shadow: 0px 2px 5px rgba(0, 255, 0, 0.5);
+        }
+        header h1 {
+            margin: 10px;
+            font-size: 2.5rem;
+            color: #00ff00;
+        }
+        header img {
+            width: 50px;
+            margin: 5px;
+        }
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #121212;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 255, 0, 0.3);
+        }
+        h2, h3 {
+            color: #00ff88;
+        }
+        pre {
+            background-color: #0d0d0d;
+            color: #00ff00;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+            box-shadow: 0px 0px 5px rgba(0, 255, 0, 0.5);
+        }
+        code {
+            color: #00ffaa;
+            font-size: 1.1rem;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        ul li {
+            margin: 10px 0;
+        }
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #1a1a1a;
+            color: #00ff44;
+        }
+        footer p {
+            margin: 5px 0;
+        }
+        footer img {
+            width: 30px;
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+        a {
+            color: #00ffaa;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .fade-in {
+            animation: fadeIn 2s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        .social-links img {
+            width: 30px;
+            margin: 0 10px;
+            vertical-align: middle;
+        }
+        .visitor-counter {
+            text-align: center;
+            margin-top: 20px;
+            color: #00ffaa;
+            font-size: 1.2rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png" alt="Git Logo">
+        <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub Logo">
+        <h1>Git and GitHub Guide</h1>
+    </header>
+    <main class="fade-in">
+        <h2>What is Git?</h2>
+        <ul>
+            <li>Git is a <b>version control system</b> that helps track changes in code.</li>
+            <li>It allows multiple people to work on the same project without overwriting each other's work.</li>
+            <li>Git is like a "time machine" for your code — you can go back to any previous version.</li>
+        </ul>
+
+        <h2>What is GitHub?</h2>
+        <ul>
+            <li>GitHub is a <b>platform</b> that hosts your Git repositories online.</li>
+            <li>It helps developers collaborate by sharing and managing their code in one place.</li>
+            <li>Think of GitHub as a social network for developers, where repositories (repos) are like profiles.</li>
+        </ul>
+
+        <h2>Basic Git Commands</h2>
+        <h3>1. Initialize a Git Repository:</h3>
+        <pre><code>git init</code></pre>
+        <p>Sets up Git tracking in your project folder.</p>
+
+        <h3>2. Check the Status:</h3>
+        <pre><code>git status</code></pre>
+        <p>Shows changes and the state of the working directory.</p>
+
+        <h3>3. Add Files for Tracking:</h3>
+        <pre><code>git add &lt;filename&gt;</code></pre>
+        <p>Stages changes to be committed. Use <code>git add .</code> to add all changes.</p>
+
+        <h3>4. Commit Changes:</h3>
+        <pre><code>git commit -m "Commit message"</code></pre>
+        <p>Saves changes with a message describing the updates.</p>
+
+        <h3>5. Push Changes to GitHub:</h3>
+        <pre><code>git push origin &lt;branch-name&gt;</code></pre>
+        <p>Sends your local changes to GitHub.</p>
+
+        <h3>6. Pull Changes from GitHub:</h3>
+        <pre><code>git pull origin &lt;branch-name&gt;</code></pre>
+        <p>Updates your local repo with changes from GitHub.</p>
+
+        <h3>7. Create a Branch:</h3>
+        <pre><code>git branch &lt;branch-name&gt;</code></pre>
+        <p>Makes a new branch for working on features.</p>
+
+        <h2>Creating a GitHub Pages Site</h2>
+        <p>GitHub Pages allows you to host static websites directly from your GitHub repository. Here's how to set up a simple website:</p>
+        <h3>1. Create a Repository:</h3>
+        <ul>
+            <li>Go to <a href="https://github.com" target="_blank">GitHub</a> and create a new repository.</li>
+            <li>Give it a name, such as <b>my-awesome-site</b>, and make sure it's public.</li>
+        </ul>
+        
+        <h3>2. Add Your Website Files:</h3>
+        <ul>
+            <li>Clone the repository to your local machine using <code>git clone &lt;repo-url&gt;</code>.</li>
+            <li>Add your website files (e.g., <code>index.html</code>, <code>styles.css</code>).</li>
+            <li>Use Git to commit and push the changes:</li>
+            <pre><code>
+            git add .
+            git commit -m "Initial commit"
+            git push origin main
+            </code></pre>
+        </ul>
+        
+        <h3>3. Configure GitHub Pages:</h3>
+        <ul>
+            <li>Go to your repository on GitHub.</li>
+            <li>Click on <b>Settings</b>, then scroll down to the <b>Pages</b> section.</li>
+            <li>Under "Source," select the branch (e.g., <b>main</b>) and folder (e.g., <b>/root</b>) where your website files are stored.</li>
+            <li>Click <b>Save</b>. Your site will be published at <code>https://your-username.github.io/repo-name</code>.</li>
+        </ul>
+        
+        <h3>4. View Your Site:</h3>
+        <ul>
+            <li>Open the URL provided in the GitHub Pages settings to see your live website.</li>
+        </ul>
+        
+        <h2>Advanced GitHub Topics</h2>
+        <h3>1. Using Actions for Automation</h3>
+        <ul>
+            <li>GitHub Actions lets you automate tasks like testing, building, and deploying your projects.</li>
+            <li>Create a workflow file in the <code>.github/workflows</code> directory of your repository.</li>
+            <li>Example workflow to deploy a static site:</li>
+            <pre><code>
+            name: Deploy Static Site
+            on:
+              push:
+                branches:
+                  - main
+            jobs:
+              build:
+                runs-on: ubuntu-latest
+                steps:
+                - name: Checkout Code
+                  uses: actions/checkout@v3
+                - name: Deploy to GitHub Pages
+                  uses: peaceiris/actions-gh-pages@v3
+                  with:
+                    github_token: ${{ secrets.GITHUB_TOKEN }}
+                    publish_dir: ./public
+            </code></pre>
+        </ul>
+        
+        <h3>2. Managing Teams and Permissions</h3>
+        <ul>
+            <li>Create teams within your GitHub organization to manage collaborators efficiently.</li>
+            <li>Assign roles like admin, maintainer, or developer to control access.</li>
+        </ul>
+        
+        <h3>3. Protecting Your Branches</h3>
+        <ul>
+            <li>Enable branch protection rules to prevent direct commits to critical branches like <code>main</code>.</li>
+            <li>Require pull request reviews before merging changes.</li>
+        </ul>
+        
+        <h3>4. Using GitHub CLI</h3>
+        <ul>
+            <li>GitHub CLI (gh) lets you perform GitHub operations directly from your terminal.</li>
+            <li>Install the CLI and log in using <code>gh auth login</code>.</li>
+            <li>Example: Create a new repository:</li>
+            <pre><code>gh repo create my-new-repo --public</code></pre>
+        </ul>
+        
+        <h3>5. GitHub Codespaces</h3>
+        <ul>
+            <li>Codespaces provide a cloud-based development environment directly in GitHub.</li>
+            <li>Start coding in seconds without setting up your local machine.</li>
+        </ul>
+        
+        <h2>Additional Tips</h2>
+        <ul>
+            <li>Keep your commits small and descriptive.</li>
+            <li>Use <b>README.md</b> to document your project.</li>
+            <li>Regularly update and maintain your repositories to keep them relevant.</li>
+            <li>Explore GitHub's marketplace for integrations and tools to enhance your workflow.</li>
+        </ul>
+            </main>
+            <footer>
+                <p>Created by <b>Md Noushad Jahan Ramim</b> | Founder & CEO of Hackathon Valley</p>
+                <div class="social-links">
+                    <a href="https://github.com/noushad999" target="_blank"><img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub Logo"></a>
+                    <a href="https://www.linkedin.com/in/md-noushad-jahan-ramim-4b57372a5/" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn Logo"></a>
+                </div>
+                <p class="visitor-counter">Visitors: 
+                <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fyourusername%2Frepo-name&count_bg=%2379C83D&title_bg=%23555555&icon=github.svg&icon_color=%23E7E7E7&title=Visits&edge_flat=false" alt="Visitor Counter" width="500px">
+                </p>
+                            </footer>
+        </body>
+        </html>
+        
+ 
